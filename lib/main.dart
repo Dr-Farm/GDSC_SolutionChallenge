@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:solution_challenge/landingPage.dart';
 
+import 'memo/page/notes_page.dart';
+
 void main() {
   runApp(const DrFarm());
 }
@@ -12,9 +14,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'GDSC Solution Challenge',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        //colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
       home: const MyHomePage(title: 'Solution Challenge'),
@@ -210,6 +212,30 @@ class _MyHomePageState extends State<MyHomePage> {
                           GestureDetector(
                             onTap: (){
                               print("click memo");
+                              //static final String title = 'Notes SQLite';
+
+                              /**@override
+                              Widget build(BuildContext context) => MaterialApp(
+                                debugShowCheckedModeBanner: false,
+                                //title: title,
+                                themeMode: ThemeMode.dark,
+                                theme: ThemeData(
+                                  primaryColor: Colors.black,
+                                  scaffoldBackgroundColor: Colors.white10,
+                                  appBarTheme: AppBarTheme(
+                                    backgroundColor: Colors.transparent,
+                                    elevation: 0,
+                                  ),
+                                ),
+                                home: NotesPage(),
+                              );**/
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        SafeArea(child: NotesPage())),
+                              );
+
                             },
                             child : Container(
                               width: 169,
