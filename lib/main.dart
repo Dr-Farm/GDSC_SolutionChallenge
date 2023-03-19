@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:solution_challenge/image.dart';
 import 'package:solution_challenge/landingPage.dart';
+import 'package:solution_challenge/resultPage.dart';
 
 import 'memo/page/notes_page.dart';
 
@@ -79,6 +81,12 @@ class _MyHomePageState extends State<MyHomePage> {
             GestureDetector(//검색바,
               onTap: (){
                 print("Container clicked");
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) =>
+                          SafeArea(child: ResultPage())), // CameraExample()로 연결
+                );
               },
               child: Row(
                 mainAxisSize: MainAxisSize.min,

@@ -1,3 +1,5 @@
+/*
+
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -5,7 +7,7 @@ import 'package:flutter/material.dart';
 class ResultPage extends StatefulWidget {
   const ResultPage({super.key});
 
- // final String title;
+  // final String title;
 
   @override
   State<ResultPage> createState() => _ResultPage();
@@ -17,28 +19,24 @@ class _ResultPage extends State<ResultPage> {
   Widget build(BuildContext context) {
 
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Result Page'),
-        actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.favorite),
-            onPressed: () {
-              color: Colors.red;
-            },
-          )
-        ],
-      ),
       body: SingleChildScrollView(
         child: Container(
           child: Stack(
             children: <Widget>[
               Container(
-                  height: 300,
-                  //width: 360,
+                height: 300,
+                width: double.infinity,
+                child: Container(
                   color: Colors.blueGrey,
-                  width: double.infinity,
-                //child: Image(image: AssetImage('assets/images/landingLogo.png')),
+                  width: 273.92,
+                  height: 192,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
                   ),
+                  //child: FlutterLogo(size: 100),
+                ),
+              ),
+              SizedBox(height: 10,),
               Container(
                 margin: EdgeInsets.fromLTRB(16.0, 250.0, 16.0, 16.0),
                 decoration: BoxDecoration(
@@ -49,11 +47,11 @@ class _ResultPage extends State<ResultPage> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Text(
-                      "Plant Disease Name",
+                      "Disease Name",//이름
                       style: Theme.of(context).textTheme.headline6,
                     ),
-                    SizedBox(height: 10.0),
-                    Text("Mar 17, 2023"),
+                    //SizedBox(height: 10.0),
+                    //Text("Oct 21, 2023"),
                     SizedBox(height: 10.0),
                     Divider(),
                     SizedBox(
@@ -61,43 +59,27 @@ class _ResultPage extends State<ResultPage> {
                     ),
                     Row(
                       children: <Widget>[
-                        IconButton(
-                          icon: Icon(Icons.favorite),
-                          onPressed: () {
-                            //저장되었습니다! 이런 팝업창 띄워주면 좋을 듯
-                          },
-                        ),
-                        SizedBox(
-                          width: 5.0,
-                        ),
-                        Text("SAVE"),
-                        SizedBox(
-                          width: 16.0,
-                        ),
-                        IconButton(
-                          icon: Icon(Icons.date_range_outlined),
-                          onPressed: () {
+                        new IconButton(
+                          //alreadySaved ? Icons.favorite : Icons.favorite_border,
 
+                          icon: Icon(Icons.favorite),
+                          color: null,
+                          onPressed: () {
+                            color: Colors.red;
                           },
+
+
                         ),
-                        SizedBox(
-                          width: 5.0,
-                        ),
-                        Text("Add Calender"),
                       ],
                     ),
                     SizedBox(
                       height: 10.0,
                     ),
-                    Text(
-                      "Content 1",
-                      textAlign: TextAlign.justify,
+                    Container(//내용
+
+
+
                     ),
-                    SizedBox(height: 10.0),
-                    Text(
-                      "Content 2",
-                      textAlign: TextAlign.justify,
-                    )
                   ],
                 ),
               ),
@@ -108,3 +90,5 @@ class _ResultPage extends State<ResultPage> {
     );
   }
 }
+
+*/
