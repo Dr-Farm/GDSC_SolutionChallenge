@@ -22,9 +22,19 @@ class _ResultPage extends State<ResultPage> {
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.favorite),
-            onPressed: () {
-              color: Colors.red;
-            },
+            onPressed: () => showDialog<String>(
+              context: context,
+              builder: (BuildContext context) => AlertDialog(
+                title: const Text('Save Success !'),
+                content: const Text('This Result is saved !'),
+                actions: <Widget>[
+                  TextButton(
+                    onPressed: () => Navigator.pop(context, 'OK'),
+                    child: const Text('OK'),
+                  ),
+                ],
+              ),
+            ),
           )
         ],
       ),
@@ -63,9 +73,19 @@ class _ResultPage extends State<ResultPage> {
                       children: <Widget>[
                         IconButton(
                           icon: Icon(Icons.favorite),
-                          onPressed: () {
-                            //저장되었습니다! 이런 팝업창 띄워주면 좋을 듯
-                          },
+                          onPressed: () => showDialog<String>(
+                            context: context,
+                            builder: (BuildContext context) => AlertDialog(
+                              title: const Text('Save Success !'),
+                              content: const Text('This Result is saved !'),
+                              actions: <Widget>[
+                                TextButton(
+                                  onPressed: () => Navigator.pop(context, 'OK'),
+                                  child: const Text('OK'),
+                                ),
+                              ],
+                            ),
+                          ),
                         ),
                         SizedBox(
                           width: 5.0,
@@ -76,9 +96,19 @@ class _ResultPage extends State<ResultPage> {
                         ),
                         IconButton(
                           icon: Icon(Icons.date_range_outlined),
-                          onPressed: () {
-
-                          },
+                          onPressed: () => showDialog<String>(
+                            context: context,
+                            builder: (BuildContext context) => AlertDialog(
+                              title: const Text('Add on Calendar !'),
+                              content: const Text('This Result is saved on Calendar !'),
+                              actions: <Widget>[
+                                TextButton(
+                                  onPressed: () => Navigator.pop(context, 'OK'),
+                                  child: const Text('OK'),
+                                ),
+                              ],
+                            ),
+                          ),
                         ),
                         SizedBox(
                           width: 5.0,
