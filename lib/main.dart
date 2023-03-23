@@ -3,6 +3,8 @@ import 'package:solution_challenge/image.dart';
 import 'package:solution_challenge/landingPage.dart';
 import 'package:solution_challenge/resultPage.dart';
 
+import 'calendar/main.dart';
+import 'calendar/pages/events_example.dart';
 import 'memo/page/notes_page.dart';
 
 void main() {
@@ -186,6 +188,18 @@ class _MyHomePageState extends State<MyHomePage> {
                           GestureDetector(
                             onTap: (){
                               print("click calender");
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (_) => TableEventsExample()),
+                                /*MaterialPageRoute(
+                                    builder: (context) =>
+                                        SafeArea(child: StartPage())),*/
+                                //CalenarEvent가 딱이구나잉 이거 이어야겠다.
+                              );/**
+                                  onPressed: () => Navigator.push(
+                                  context,
+                                  MaterialPageRoute(builder: (_) => TableEventsExample()),
+                                  ),*/
                             },
                             child : Container(
                               width: 169,
@@ -202,7 +216,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                           image: AssetImage('assets/images/cal.png')),
                                       SizedBox(height: 1),
                                       Text(
-                                        "calendar",
+                                        "Calendar",
                                         style: TextStyle(
                                           color: Colors.black,
                                           fontSize: 12,
@@ -219,7 +233,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           SizedBox(width: 45),
                           GestureDetector(
                             onTap: (){
-                              print("click memo");
+                              print("click Board");
                               //static final String title = 'Notes SQLite';
 
                               /**@override
@@ -260,7 +274,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                           image: AssetImage('assets/images/memoIcon.png')),
                                       SizedBox(height: 1),
                                       Text(
-                                        "memo",
+                                        "Board",
                                         style: TextStyle(
                                           color: Colors.black,
                                           fontSize: 12,

@@ -73,7 +73,7 @@ class _NotesPageState extends State<NotesPage> {
               ),
               SizedBox(height: 7),
               Text(
-                "Memo",
+                "Board",
                 style: TextStyle(
                   color: Colors.black,
                   fontSize: 25,
